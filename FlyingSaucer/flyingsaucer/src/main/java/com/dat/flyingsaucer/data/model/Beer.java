@@ -3,7 +3,7 @@ package com.dat.flyingsaucer.data.model;
 /**
  * Created by davidthacker on 5/21/15.
  */
-public class Beer {
+public class Beer implements BaseModel {
 
     public String title;
     public String description;

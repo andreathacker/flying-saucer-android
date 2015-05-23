@@ -3,14 +3,13 @@ package com.dat.flyingsaucer.data.model;
 /**
  * Created by davidthacker on 5/23/15.
  */
-public class Store implements BaseModel{
+public class StoreBeerItem implements BaseModel{
 
-    public String slug;
+    public String id;
     public String name;
-    public Location location;
+    public String container;
 
-    public Store() {
+    public StoreBeerItem() {
         super();
     }
-
 }
