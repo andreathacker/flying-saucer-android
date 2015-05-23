@@ -3,7 +3,7 @@ package com.dat.flyingsaucer.data.model;
 /**
  * Created by davidthacker on 5/23/15.
  */
-public class Location {
+public class Location implements BaseModel{
 
     public double lat;
     public double lon;
