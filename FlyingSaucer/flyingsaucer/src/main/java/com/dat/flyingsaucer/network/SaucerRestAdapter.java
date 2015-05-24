@@ -1,9 +1,6 @@
 package com.dat.flyingsaucer.network;
 
 import com.dat.flyingsaucer.data.model.BaseModel;
-import com.dat.flyingsaucer.data.model.Store;
-
-import java.util.List;
 
 import retrofit.RestAdapter;
 
@@ -12,12 +9,12 @@ import retrofit.RestAdapter;
  */
 public class SaucerRestAdapter {
 
-    private SaucerService service;
+    private SaucerService mService;
 
     public SaucerRestAdapter() {
 
         RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(SaucerService.BASE_ENDPOINT).build();
-        service = restAdapter.create(SaucerService.class);
+        mService = restAdapter.create(SaucerService.class);
 
     }
 
