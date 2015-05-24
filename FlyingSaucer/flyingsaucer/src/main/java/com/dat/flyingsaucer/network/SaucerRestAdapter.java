@@ -1,5 +1,10 @@
 package com.dat.flyingsaucer.network;
 
+import com.dat.flyingsaucer.data.model.BaseModel;
+import com.dat.flyingsaucer.data.model.Store;
+
+import java.util.List;
+
 import retrofit.RestAdapter;
 
 /**
@@ -7,7 +12,7 @@ import retrofit.RestAdapter;
  */
 public class SaucerRestAdapter {
 
-    public SaucerService service;
+    private SaucerService service;
 
     public SaucerRestAdapter() {
 
@@ -16,4 +21,10 @@ public class SaucerRestAdapter {
 
     }
 
+    public interface RestCallback<T extends BaseModel>{
+
+        T onSuccess();
+        void onError();
+
+    }
 }
