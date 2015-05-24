@@ -20,6 +20,9 @@ public interface SaucerService {
     @GET("/stores")
     void listStores(Callback<List<Store>> callback);
 
+    @GET("/stores")
+    List<Store> listStores();
+
     @GET("/stores/{slug}")
     void getStore(@Path("slug") String storeSlug, Callback<Store> callback);
 

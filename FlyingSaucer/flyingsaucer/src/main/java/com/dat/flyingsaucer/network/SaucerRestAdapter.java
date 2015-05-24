@@ -8,7 +8,6 @@ import com.dat.flyingsaucer.data.model.Beer;
 import com.dat.flyingsaucer.data.model.Store;
 import com.dat.flyingsaucer.data.model.StoreBeerItem;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.Callback;
@@ -55,30 +54,6 @@ public class SaucerRestAdapter {
         });
     }
 
-    public void getStore(String storeSlug, final RestCallback<StoreDao> callback) {
-
-        mService.getStore(storeSlug, new Callback<Store>() {
-            @Override
-            public void success(Store store, Response response) {
-
-                if (store != null) {
-
-                    StoreDao dao = new StoreDao();
-                    dao.modelList.add(store);
-
-                    callback.onSuccess(dao);
-
-                } else {
-                    callback.onSuccess(null);
-                }
-            }
-
-            @Override
-            public void failure(RetrofitError error) {
-                callback.onError();
-            }
-        });
-    }
 
     public void getBeer(String beerId, final RestCallback<BeerDao> callback) {
 
