@@ -8,6 +8,7 @@ import com.dat.flyingsaucer.data.model.Beer;
 import com.dat.flyingsaucer.data.model.Store;
 import com.dat.flyingsaucer.data.model.StoreBeerItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.Callback;

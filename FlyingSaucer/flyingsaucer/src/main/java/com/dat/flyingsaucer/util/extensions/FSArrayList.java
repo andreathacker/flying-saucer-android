@@ -1,11 +1,12 @@
 package com.dat.flyingsaucer.util.extensions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by davidthacker on 5/23/15.
  */
-public class FSArrayList<E> extends ArrayList<E> {
+public class FSArrayList<E> extends ArrayList<E> implements List<E> {
 
     public boolean notEmpty() {
         return !isEmpty();

@@ -10,6 +10,6 @@ import java.util.List;
  */
 public abstract class BaseDao<T extends BaseModel> {
 
-    public FSArrayList<T> modelList;
+    public List<T> modelList;
 
 }
