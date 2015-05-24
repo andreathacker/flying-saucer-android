@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dat.flyingsaucer.data.dao.BeerDao;
+import com.dat.flyingsaucer.data.dao.StoreDao;
 import com.dat.flyingsaucer.data.model.Beer;
 import com.dat.flyingsaucer.data.model.StoreBeerItem;
 import com.dat.flyingsaucer.network.SaucerRestAdapter;
@@ -34,26 +36,26 @@ public class BeerListActivityFragment extends Fragment {
         /* This is sample code to demonstrate that Retrofit has been
         * correctly integrated into the project. */
         SaucerRestAdapter restAdapter = new SaucerRestAdapter();
-        restAdapter.service.getBeer("1", new Callback<Beer>() {
+        restAdapter.getAllStores(new SaucerRestAdapter.RestCallback<StoreDao>() {
             @Override
-            public void success(Beer beer, Response response) {
+            public void onSuccess(StoreDao dao) {
 
             }
 
             @Override
-            public void failure(RetrofitError error) {
+            public void onError() {
 
             }
         });
 
-        restAdapter.service.listStoreBeers("nashville", new Callback<List<StoreBeerItem>>() {
+        restAdapter.getBeer("2", new SaucerRestAdapter.RestCallback<BeerDao>() {
             @Override
-            public void success(List<StoreBeerItem> beers, Response response) {
+            public void onSuccess(BeerDao dao) {
 
             }
 
             @Override
-            public void failure(RetrofitError error) {
+            public void onError() {
 
             }
         });
