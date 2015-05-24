@@ -1,6 +1,7 @@
 package com.dat.flyingsaucer.data.dao;
 
 import com.dat.flyingsaucer.data.model.BaseModel;
+import com.dat.flyingsaucer.util.extensions.FSArrayList;
 
 import java.util.List;
 
@@ -9,6 +10,6 @@ import java.util.List;
  */
 public abstract class BaseDao<T extends BaseModel> {
 
-    protected List<T> mModelList;
+    public FSArrayList<T> modelList;
 
 }
