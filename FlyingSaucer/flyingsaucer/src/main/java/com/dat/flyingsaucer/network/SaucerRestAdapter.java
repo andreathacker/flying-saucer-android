@@ -20,18 +20,24 @@ import retrofit.client.Response;
  */
 public class SaucerRestAdapter {
 
-    private SaucerService mService;
+    private static SaucerService mService;
 
-    public SaucerRestAdapter() {
+    private static SaucerService getInstance() {
+        if (mService == null) {
+            initialize();
+        }
 
-        RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(SaucerService.BASE_ENDPOINT).build();
-        mService = restAdapter.create(SaucerService.class);
-
+        return mService;
     }
 
-    public void getAllStores(final RestCallback<StoreDao> callback){
+    private static void initialize() {
+        RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(SaucerService.BASE_ENDPOINT).build();
+        mService = restAdapter.create(SaucerService.class);
+    }
 
-        mService.listStores(new Callback<List<Store>>() {
+    public static void getAllStores(final RestCallback<StoreDao> callback){
+
+        getInstance().listStores(new Callback<List<Store>>() {
             @Override
             public void success(List<Store> stores, Response response) {
 
@@ -42,7 +48,7 @@ public class SaucerRestAdapter {
 
                     callback.onSuccess(dao);
 
-                }else{
+                } else {
                     callback.onSuccess(null);
                 }
             }
@@ -55,9 +61,9 @@ public class SaucerRestAdapter {
     }
 
 
-    public void getBeer(String beerId, final RestCallback<BeerDao> callback) {
+    public static void getBeer(String beerId, final RestCallback<BeerDao> callback) {
 
-        mService.getBeer(beerId, new Callback<Beer>() {
+        getInstance().getBeer(beerId, new Callback<Beer>() {
             @Override
             public void success(Beer beer, Response response) {
 
@@ -80,9 +86,9 @@ public class SaucerRestAdapter {
         });
     }
 
-    public void getStoreBeerItems(String storeSlug, final RestCallback<StoreBeerItemDao> callback){
+    public static void getStoreBeerItems(String storeSlug, final RestCallback<StoreBeerItemDao> callback){
 
-        mService.listStoreBeers(storeSlug, new Callback<List<StoreBeerItem>>() {
+        getInstance().listStoreBeers(storeSlug, new Callback<List<StoreBeerItem>>() {
 
             @Override
             public void success(List<StoreBeerItem> storeBeerItems, Response response) {
