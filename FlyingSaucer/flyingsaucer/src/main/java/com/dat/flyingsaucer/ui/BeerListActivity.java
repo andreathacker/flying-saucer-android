@@ -1,4 +1,6 @@
-package com.dat.flyingsaucer;
+package com.dat.flyingsaucer.ui;
+
+import com.dat.flyingsaucer.R;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
