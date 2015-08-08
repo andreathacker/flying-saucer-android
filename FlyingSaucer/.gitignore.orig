@@ -1,0 +1,11 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+<<<<<<< HEAD
+flyingsaucer/build
+=======
+>>>>>>> cb10a8504e89db82bb0f438f74c54ee2840f724f
