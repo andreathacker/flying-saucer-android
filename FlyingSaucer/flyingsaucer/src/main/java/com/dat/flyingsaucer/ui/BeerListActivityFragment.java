@@ -61,11 +61,8 @@ public class BeerListActivityFragment extends Fragment {
     }
 
     public void performApiCalls(){
-               /* This is sample code to demonstrate that Retrofit has been
-        * correctly integrated into the project. */
-        SaucerRestAdapter restAdapter = new SaucerRestAdapter();
 
-        restAdapter.getBeer("2", new SaucerRestAdapter.RestCallback<BeerDao>() {
+        SaucerRestAdapter.getBeer("2", new SaucerRestAdapter.RestCallback<BeerDao>() {
             @Override
             public void onSuccess(BeerDao dao) {
                 Log.d(TAG, "GetBeer success, /beer/:id");
@@ -78,7 +75,7 @@ public class BeerListActivityFragment extends Fragment {
         });
 
 
-        restAdapter.getStoreBeerItems("nashville", new SaucerRestAdapter.RestCallback<StoreBeerItemDao>() {
+        SaucerRestAdapter.getStoreBeerItems("nashville", new SaucerRestAdapter.RestCallback<StoreBeerItemDao>() {
             @Override
             public void onSuccess(StoreBeerItemDao dao) {
                 Log.d(TAG, "GetStoreBeerItems success, /stores/nashville/beers");

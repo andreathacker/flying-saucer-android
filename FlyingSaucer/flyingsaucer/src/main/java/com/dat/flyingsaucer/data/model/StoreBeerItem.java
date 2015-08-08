@@ -7,7 +7,7 @@ public class StoreBeerItem implements BaseModel{
 
     public String id;
     public String name;
-    public String container;
+    public @Beer.Container String container;
 
     public StoreBeerItem() {
         super();
