@@ -7,16 +7,26 @@
               android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:theme="@style/tool_bar_style"/>
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/tool_bar_style"/>
+
+    <TextView
+        android:id="@+id/beer_list_header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:text="@string/title_beer_list"/>
 
     <fragment
-            android:id="@+id/fragment"
-            android:name="com.dat.flyingsaucer.store.StoreBeersFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout="@layout/fragment_store_beers"/>
+        android:id="@+id/fragment"
+        android:name="com.dat.flyingsaucer.store.StoreBeersFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        tools:layout="@layout/fragment_store_beers"/>
 
 </LinearLayout>

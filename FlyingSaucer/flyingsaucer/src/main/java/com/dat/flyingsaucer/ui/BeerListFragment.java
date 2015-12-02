@@ -28,11 +28,11 @@ import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class BeerListActivityFragment extends Fragment {
+public class BeerListFragment extends Fragment {
 
     public static final String TAG = "Retrofit";
 
-    public BeerListActivityFragment() {
+    public BeerListFragment() {
 
     }
 

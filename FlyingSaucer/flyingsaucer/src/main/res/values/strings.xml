@@ -2,4 +2,9 @@
     <string name="app_name">FlyingSaucer</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+
+    <string name="title_store_beers_activity">Flying Saucer Beers</string>
+    <string name="title_beer_list">Flying Saucer Beer List</string>
+
 </resources>

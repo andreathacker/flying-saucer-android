@@ -18,7 +18,7 @@ public class StoreBeersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_store_beers);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Flying Saucer");
+        toolbar.setTitle(getString(R.string.title_store_beers_activity));
         setSupportActionBar(toolbar);
     }
 }
